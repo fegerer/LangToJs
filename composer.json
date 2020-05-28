@@ -1,0 +1,43 @@
+{
+    "name": "fegerer/langtojs",
+    "description": ":package_description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fabian Egerer",
+            "email": "fegerer089@gmail.com",
+            "homepage": "https://fegerer.de"
+        }
+    ],
+    "homepage": "https://github.com/fegerer/langtojs",
+    "keywords": ["Laravel", "LangToJs"],
+    "require": {
+        "illuminate/support": "~5|~6|~7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3|~4",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fegerer\\LangToJs\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Fegerer\\LangToJs\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Fegerer\\LangToJs\\LangToJsServiceProvider"
+            ],
+            "aliases": {
+                "LangToJs": "Fegerer\\LangToJs\\Facades\\LangToJs"
+            }
+        }
+    }
+}
